@@ -12,7 +12,8 @@ export default function LocationPage() {
       .then(coordinates => {
         const { latitude, longitude } = coordinates;
         const url = `https://www.google.com/maps/@${latitude},${longitude},15z`;
-        router.push(url);
+        console.log(coordinates)
+        // router.push(url);
       })
       .catch(error => {
         console.error(error);
